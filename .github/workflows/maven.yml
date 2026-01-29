@@ -50,8 +50,9 @@ jobs:
     # Collect the site into a single folder (Pages will serve these files)
     - name: Prepare site folder
       run: |
-        # mkdir -p site
+        mkdir -p site
         # cp -r target/site/* site/
+        cp -r target/surefire-reports/* site/
         # Optional: add a simple index redirect to the Surefire report
         if [ -f site/surefire-report.html ]; then
           printf '<meta http-equiv="refresh" content="0; url=surefire-report.html">' > site/index.html
