@@ -42,9 +42,7 @@ jobs:
     # Run tests and build the Maven Surefire HTML report
     - name: Build test and report with Maven
       run: |
-        mvn -B package --file pom.xml
-        mvn -B -DskipTests=false test
-        mvn test -B surefire-report:report
+        mvn --file pom.xml test surefire-report:report
 
     # Collect the site into a single folder (Pages will serve these files)
     - name: Prepare site folder
