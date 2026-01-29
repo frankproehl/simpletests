@@ -17,7 +17,7 @@ on:
 
 # Minimum permissions required for Pages deployments
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
