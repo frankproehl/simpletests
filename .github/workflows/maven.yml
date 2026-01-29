@@ -45,7 +45,7 @@ jobs:
     - name: Run tests
       run: mvn -B -DskipTests=false test
     - name: Generate Surefire HTML report
-      run: mvn -B surefire-report:report
+      run: mvn test -B surefire-report:report
 
     # Collect the site into a single folder (Pages will serve these files)
     - name: Prepare site folder
