@@ -70,9 +70,50 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>3.2.2</version>
+                <version>3.5.4</version>
+                <!-- <configuration>
+                    <targetPath>${basedir}/bla/newsite</targetPath>
+                    <reportDirectory>${basedir}/bla/newsite</reportDirectory>
+                    <outputDirectory>${basedir}/bla/newsite</outputDirectory>
+                    <outputName>hotzenblitz</outputName>
+                </configuration> -->
+
+      <configuration>
+        <includes>
+          <aggregate>true</aggregate>
+          <include>**/*Test.java</include>
+          <include>**/*Tests.java</include>
+          <include>**/*TestCase.java</include>
+          <!-- If you use Kotlin/Groovy/Scala, add patterns as needed -->
+          <include>**/*Test.kt</include>
+          <include>**/*Spec.groovy</include>
+        </includes>
+      </configuration>
+
+            </plugin>
+            
+            <!-- <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.4</version> -->
+                <!-- <configuration>
+                    <targetPath>${basedir}/bla/newsite</targetPath>
+                    <reportDirectory>${basedir}/bla/newsite</reportDirectory>
+                    <outputDirectory>${basedir}/bla/newsite</outputDirectory>
+                    <outputName>hotzenblitz</outputName>
+                </configuration> -->
+            <!-- </plugin> -->
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>2.1</version>
+                <!-- <configuration>
+                    <targetPath>${basedir}/bla/newsite</targetPath>
+                    <outputDirectory>${basedir}/bla/schnappsel</outputDirectory>
+                </configuration> -->
             </plugin>
         </plugins>
     </reporting>
-    
+
 </project>
